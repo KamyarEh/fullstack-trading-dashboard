@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
 
-    fetch("http://127.0.0.1:8000/prices")
+    fetch("https://fullstack-trading-dashboard.onrender.com")
       .then((response) => response.json())
       .then((data) => {
 
@@ -44,7 +44,7 @@ function App() {
   function runBacktest() {
 
     fetch(
-      `http://127.0.0.1:8000/backtest?starting_cash=${startingCash}&short_window=${shortWindow}&long_window=${longWindow}`
+      `http://https://fullstack-trading-dashboard.onrender.com/backtest?starting_cash=${startingCash}&short_window=${shortWindow}&long_window=${longWindow}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -57,7 +57,7 @@ function App() {
 
   function loadOrderBook() {
 
-    fetch("http://127.0.0.1:8000/order_book")
+    fetch("http://https://fullstack-trading-dashboard.onrender.com/order_book")
       .then((response) => response.json())
       .then((data) => {
 
@@ -70,7 +70,7 @@ function App() {
   function submitOrder() {
 
     fetch(
-      `http://127.0.0.1:8000/add_order?order_type=${orderType}&price=${price}&quantity=${quantity}`
+      `http://https://fullstack-trading-dashboard.onrender.com/add_order?order_type=${orderType}&price=${price}&quantity=${quantity}`
     )
       .then((response) => response.json())
       .then((data) => {
