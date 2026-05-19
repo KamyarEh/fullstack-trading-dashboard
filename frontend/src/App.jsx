@@ -12,7 +12,11 @@ import {
 
 function App() {
 
-  const [prices, setPrices] = useState([]);
+  const [prices, setPrices] = useState([
+    { Date: "2024", SP500: 100},
+    { Date: "2025", SP500: 120},
+    { Date: "2026", SP500: 140},
+  ]);
   const [backtest, setBacktest] = useState(null);
 
   const [startingCash, setStartingCash] = useState(10000);
@@ -27,13 +31,6 @@ function App() {
 
   useEffect(() => {
 
-    fetch("https://fullstack-trading-dashboard.onrender.com")
-      .then((response) => response.json())
-      .then((data) => {
-
-        setPrices(data.prices);
-
-      });
 
     runBacktest();
 
