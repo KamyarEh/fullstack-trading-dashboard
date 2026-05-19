@@ -197,10 +197,6 @@ function App() {
               onChange={(e) => setQuantity(e.target.value)}
             />
             
-            <div
-              className="cf-turnstile mb-4"
-              data-sitekey="0x4AAAAAADMuQvo7cOEvtGMD"
-            ></div>
 
             <button
               className="bg-green-500 hover:bg-green-400 px-6 rounded-xl text-black font-bold transition"
